@@ -1,0 +1,115 @@
+:root {
+  	--background-color: #000;
+  	--primary-color: #FFF;
+  	--divider-height: 14px;
+  	--border-size: 8px;
+}
+
+* {
+	font-family: Sans-Serif;
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.original {
+	width: 53vh;
+	height: 80vh;
+	background-image: url(assets/carta.jpeg);
+	background-size: cover;	
+}
+
+.card {
+	width: calc(53vh - ( var(--border-size) * 2 ));
+	height: calc(80vh - ( var(--border-size) * 2 ));
+	border-radius: 20px;
+	border: 7px solid var(--primary-color);
+	box-shadow: 0px 0px 0px var(--border-size) var(--background-color);
+	background-color: var(--background-color);
+}
+	.content {
+		padding: 15px;
+		height: calc(50% - ( var(--divider-height) / 2 ));
+		position: relative;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.content.bottom {
+		-webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+	}
+
+		p {
+			color: var(--primary-color);
+			margin: 0px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+			p.title:after {
+				content: url(assets/flag.png);
+				position: absolute;
+				margin-left: 7px;
+			}
+
+		.habilities {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+
+		.box {
+			position: absolute;
+			background-color: var(--background-color);
+			
+			bottom: -10px;
+			width: calc(100% - 30px);
+			padding: 10px 10px 30px 10px;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: flex-start;
+
+			border: 5px solid var(--primary-color);
+			border-radius: 6px;
+		}
+			.box .energy {
+				width: 35px;
+				height: 22px;
+				margin-right: 5px;
+			}
+				.box .energy.top {
+					background-image: url(assets/energia-top.png);
+				}
+
+				.box .energy.bottom {
+					background-image: url(assets/energia-bottom.png);
+				}
+			
+			.box .bust {
+				position: absolute;
+				left: 0px;
+				top: -144px;
+
+				height: 144px;
+				width: 100%;
+				
+				background-image: url(assets/bust.png);
+			}
+
+			.box p {
+				font-size: 18px;
+				margin-left: 5px;
+			}
+
+.divider {
+	width: 100%;
+	height: var(--divider-height);
+	background-color: var(--primary-color);
+}

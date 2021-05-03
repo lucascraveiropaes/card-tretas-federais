@@ -1,0 +1,9 @@
+Senadora
+PN 30
+FC 70
+EE Remove Paralisia de algum aliado no tabuleiro
+
+Senadora
+PN 30
+FC 70
+CC Foro Privilegiado: Regenera 40 de FC
